@@ -1,0 +1,42 @@
+[
+  {
+    "name": "The very first one...",
+    "language": "ITA",
+    "description": "This is the first crossword I created, approximately in 2017",
+    "dimensions": "10 x 11"
+  },
+  {
+    "name": "A big cinema quiz",
+    "language": "ITA",
+    "description": "This one is about cinema, it's quite specific at times. It's meant to test your knowledge about cinema",
+    "dimensions": "16 x 16"
+  }
+  ,
+  {
+    "name": "Qualcosa numero tre",
+    "language": "ENG",
+    "description": "Una descrizione esempio per cruci numero tre",
+    "dimensions": "12 x 13"
+  }
+  ,
+  {
+    "name": "Il numero quattro",
+    "language": "ITA",
+    "description": "La descrizione del numero quattro giusto per fare un test",
+    "dimensions": "10 x 10"
+  }
+  ,
+  {
+    "name": "The fifth",
+    "language": "ENG",
+    "description": "This one is number five in my series of examples, let's just make this description longer the longest one to better test this app",
+    "dimensions": "10 x 12"
+  }
+  ,
+  {
+    "name": "Again another puzzle",
+    "language": "ITA",
+    "description": "Descrizione breve per testing",
+    "dimensions": "11 x 11"
+  }
+]
