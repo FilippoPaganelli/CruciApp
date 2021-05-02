@@ -10,7 +10,7 @@
 .svn/
 
 # don't want to share my crosswords here
-/lib/cw
+/lib/cw/
 
 # IntelliJ related
 *.iml
