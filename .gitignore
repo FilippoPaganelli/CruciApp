@@ -32,7 +32,7 @@
 /build/
 
 # don't want to share my crosswords here
-/assets/1/
+/assets/1/*
 
 # Web related
 lib/generated_plugin_registrant.dart
