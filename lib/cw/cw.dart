@@ -16,6 +16,7 @@ class _CWPageState extends State<CWPage> {
   String thisCW;
   bool isVertical = false;
   int lastTapped = -1;
+  Map<int, String> userInputs = Map();
 
   final FocusScopeNode _node = FocusScopeNode();
 
@@ -108,13 +109,16 @@ class _CWPageState extends State<CWPage> {
                                             lastTapped = index;
                                           },
                                           onChanged: (text) {
-                                            //_inputChange(text);
-
-                                            isVertical == false
-                                                ? _node.focusInDirection(
-                                                    TraversalDirection.right)
-                                                : _node.focusInDirection(
-                                                    TraversalDirection.down);
+                                            userInputs[index] = text;
+                                            if (text.isEmpty) {
+                                              userInputs.remove(index);
+                                            } else {
+                                              isVertical == false
+                                                  ? _node.focusInDirection(
+                                                      TraversalDirection.right)
+                                                  : _node.focusInDirection(
+                                                      TraversalDirection.down);
+                                            }
                                           },
                                         ),
                                 ));
