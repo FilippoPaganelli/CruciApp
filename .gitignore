@@ -9,6 +9,9 @@
 .history
 .svn/
 
+# don't want to share my crosswords here
+/lib/cw
+
 # IntelliJ related
 *.iml
 *.ipr
