@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'dart:convert';
-import 'myBoard.dart';
+
+import 'package:flutter/services.dart';
 
 class CWPage extends StatefulWidget {
   final String thisCW;
@@ -13,6 +14,21 @@ class CWPage extends StatefulWidget {
 
 class _CWPageState extends State<CWPage> {
   String thisCW;
+  bool isVertical = false;
+  int lastTapped = -1;
+
+  final FocusScopeNode _node = FocusScopeNode();
+
+  @override
+  void initState() {
+    super.initState();
+  }
+
+  @override
+  void dispose() {
+    _node.dispose();
+    super.dispose();
+  }
 
   _CWPageState(this.thisCW);
 
@@ -49,14 +65,59 @@ class _CWPageState extends State<CWPage> {
                         child: GridView.count(
                           crossAxisCount: 11, // n° elements in each row!
                           children: List.generate(110, (index) {
-                            return Center(
-                              child: Text(
-                                sol[index].toUpperCase(),
-                                style: TextStyle(
-                                    fontSize: 32,
-                                    fontWeight: FontWeight.normal),
-                              ),
-                            );
+                            return FocusScope(
+                                node: _node,
+                                child: Container(
+                                  width: 40,
+                                  height: 40,
+                                  decoration: BoxDecoration(
+                                      color: sol[index] == '-'
+                                          ? Color.fromRGBO(45, 91, 166, 1)
+                                          : Colors.white,
+                                      border: Border.all(color: Colors.black)),
+                                  child: sol[index] == '-'
+                                      ? Text('')
+                                      : TextField(
+                                          textCapitalization:
+                                              TextCapitalization.sentences,
+                                          inputFormatters: [
+                                            LengthLimitingTextInputFormatter(1),
+                                          ],
+                                          cursorWidth: 5,
+                                          textAlign: TextAlign.center,
+                                          decoration: InputDecoration(
+                                              contentPadding: EdgeInsets.all(0),
+                                              enabledBorder: OutlineInputBorder(
+                                                  borderRadius:
+                                                      BorderRadius.all(
+                                                          Radius.circular(0)),
+                                                  borderSide: BorderSide(
+                                                      color:
+                                                          Colors.grey[600]))),
+                                          cursorColor: Colors.black,
+                                          textAlignVertical:
+                                              TextAlignVertical.center,
+                                          style: TextStyle(
+                                              fontSize: 28,
+                                              fontWeight: FontWeight.bold,
+                                              decoration: TextDecoration.none),
+                                          onTap: () {
+                                            if (lastTapped == index) {
+                                              isVertical = !isVertical;
+                                            }
+                                            lastTapped = index;
+                                          },
+                                          onChanged: (text) {
+                                            //_inputChange(text);
+
+                                            isVertical == false
+                                                ? _node.focusInDirection(
+                                                    TraversalDirection.right)
+                                                : _node.focusInDirection(
+                                                    TraversalDirection.down);
+                                          },
+                                        ),
+                                ));
                           }),
                         ),
                       ),
@@ -70,5 +131,9 @@ class _CWPageState extends State<CWPage> {
         ],
       ),
     );
+  }
+
+  void _inputChange(String text) {
+    print(text);
   }
 }
