@@ -9,9 +9,6 @@
 .history
 .svn/
 
-# don't want to share my crosswords here
-/lib/cw/
-
 # IntelliJ related
 *.iml
 *.ipr
@@ -33,6 +30,9 @@
 .pub-cache/
 .pub/
 /build/
+
+# don't want to share my crosswords here
+/assets/1/
 
 # Web related
 lib/generated_plugin_registrant.dart
