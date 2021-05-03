@@ -167,7 +167,7 @@ _launchEmail(BuildContext ctx) async {
 }
 
 _launchGithub(BuildContext ctx) async {
-  const url = 'https://github.com/FilippoPaganelli';
+  const url = 'https://github.com/FilippoPaganelli/CruciApp';
   if (await canLaunch(url)) {
     await launch(url);
   } else {
