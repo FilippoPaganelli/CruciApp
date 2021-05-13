@@ -3,6 +3,7 @@ import 'dart:convert';
 import 'dart:io';
 import 'package:flutter/services.dart';
 import 'package:path_provider/path_provider.dart';
+import 'def.dart';
 
 class CWPage extends StatefulWidget {
   final String thisCW;
@@ -17,6 +18,8 @@ class _CWPageState extends State<CWPage> {
   final String thisCW;
   bool isVertical = false;
   int lastTapped = -1;
+  List<String> sol = [];
+  List<Definition> def = [];
   Map<String, String> userInputs = Map();
   Map<String, List<int>> words = Map();
   List<TextEditingController> _controllers = [];
@@ -28,7 +31,10 @@ class _CWPageState extends State<CWPage> {
 
   @override
   void initState() {
+    sol.clear();
+    def.clear();
     super.initState();
+    _loadDef();
   }
 
   @override
@@ -97,7 +103,7 @@ class _CWPageState extends State<CWPage> {
                         padding: const EdgeInsets.only(
                             left: 10, right: 10, top: 10, bottom: 10),
                         child: GridView.count(
-                          // MAKE 11 AND 110 VARIABLE ACCORDING TO CROSSWORD DIMENSIONS!
+                          // MAKE 11 AND 110 VARIABLE ACCORDING TO CROSSWORD DIMENSIONS in cwinfos.json!
                           crossAxisCount:
                               11, // n° elements in each row! a.k.a. "cols" property in cwinfos.json!
                           children: List.generate(110, (index) {
@@ -325,12 +331,27 @@ class _CWPageState extends State<CWPage> {
     final String sols = await DefaultAssetBundle.of(context)
         .loadString('assets/$thisCW/sol.json');
 
-    int length = json.decode(sols).length;
-    for (var i = 0; i < length; i++) {
+    final data2 = json.decode(sols);
+    data2.forEach((el) {
+      sol.add(el);
+    });
+    for (var i = 0; i < sol.length; i++) {
       _controllers.add(new TextEditingController());
     }
 
     return sols;
+  }
+
+  void _loadDef() async {
+    // load definitions for showing them and highlithing words
+    final String defs = await DefaultAssetBundle.of(context)
+        .loadString('assets/$thisCW/def.json');
+    final data3 = json.decode(defs);
+    // put them in list def
+    data3.forEach((el) {
+      def.add(new Definition(el["index"], el["h_clue"]["def"],
+          el["h_clue"]["word"], el["v_clue"]["def"], el["v_clue"]["word"]));
+    });
   }
 
   Future<String> get _localPath async {
