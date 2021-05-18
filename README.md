@@ -5,4 +5,11 @@
 At the moment the HomePage just renders a list of tiles, each showing information about a crossword (its number, title, description, language and soon its dimensions).
 Here's a snapshot of the current working prototype:
 
-<img src="snapshots/HomePage.jpg" alt="drawing" width="300"/>
+<img src="snapshots/HomePage.jpg" alt="HomePage" width="300"/>
+
+There's also a side menu with basic links (to my [browser version](), to this repository, to [my website]() and e-mail).
+Here's a snapshot of the HomePage with the menu open:
+
+<img src="snapshots/SideMenu.jpg" alt="SideMenu" width="300"/>
+
+*Further updates will come soon...*
