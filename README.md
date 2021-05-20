@@ -10,6 +10,6 @@ Here's a snapshot of the current working prototype:
 There's also a side menu with basic links (to the [browser version](https://filippopaganelli.github.io/crosswords.html), to this repository, to [my website](https://filippopaganelli.github.io/) and e-mail).
 Here's a snapshot of the HomePage with the menu open:
 
-<img src="snapshots/SideMenu.jpg" alt="SideMenu" width="300"/>
+<img src="snapshots/SideMenu.jpg" alt="SideMenu" width="150"/>
 
 *Further updates will come soon...*
