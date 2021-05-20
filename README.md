@@ -8,7 +8,7 @@ Here's a snapshot of the current working prototype:
 <img src="snapshots/HomePage.jpg" alt="HomePage" width="150"/>
 
 There's also a side menu with basic links (to the [browser version](https://filippopaganelli.github.io/crosswords.html), to this repository, to [my website](https://filippopaganelli.github.io/) and e-mail).
-Here's a snapshot of the HomePage with the menu open:
+Here's a snapshot of the HomePage with the open menu:
 
 <img src="snapshots/SideMenu.jpg" alt="SideMenu" width="150"/>
 
