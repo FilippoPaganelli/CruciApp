@@ -113,12 +113,29 @@ class HomePage extends StatelessWidget {
                             '\n' + data[index]["description"],
                             style: TextStyle(fontSize: 18),
                           ),
-                          trailing: Text(
-                            data[index]["language"],
-                            style: TextStyle(
-                                color: Colors.blueGrey[600],
-                                fontSize: 15,
-                                fontWeight: FontWeight.bold),
+                          trailing: Column(
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            children: [
+                              Text(
+                                data[index]["language"],
+                                style: TextStyle(
+                                    color: Colors.blueGrey[600],
+                                    fontSize: 17,
+                                    fontWeight: FontWeight.bold),
+                              ),
+                              /*SizedBox(
+                                height: 20,
+                              ),*/
+                              Text(
+                                data[index]["rows"].toString() +
+                                    ' x ' +
+                                    data[index]["cols"].toString(),
+                                style: TextStyle(
+                                    color: Colors.blueGrey[600],
+                                    fontSize: 17,
+                                    fontWeight: FontWeight.bold),
+                              ),
+                            ],
                           ),
                           leading: Column(
                             mainAxisAlignment: MainAxisAlignment.center,
