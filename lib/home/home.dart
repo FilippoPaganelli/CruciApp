@@ -98,8 +98,14 @@ class HomePage extends StatelessWidget {
                           onTap: () {
                             // ONTAP NAVIGATION:
                             HapticFeedback.vibrate();
-                            Navigator.of(context).pushNamed('/cw',
-                                arguments: (index + 1).toString());
+                            Navigator.of(context).pushNamed(
+                              '/cw',
+                              arguments: [
+                                (index + 1).toString(),
+                                data[index]["rows"],
+                                data[index]["cols"]
+                              ],
+                            );
                           },
                           contentPadding: EdgeInsets.only(
                               top: 5, left: 20, right: 15, bottom: 5),

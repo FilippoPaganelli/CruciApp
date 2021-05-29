@@ -12,4 +12,9 @@ Here's a snapshot of the HomePage with the open menu:
 
 <img src="snapshots/SideMenu.jpg" alt="SideMenu" width="150"/>
 
+Every crossword page has a grid for the actual crossword, three buttons for **saving, resetting and checking** the grid's state.
+Here's a snapshot of it: *(note: words get highlighted on tap event, both vertically and horizontally)*
+
+<img src="snapshots/CWPage.jpg" alt="CWPage" width="150"/>
+
 *Further updates will come soon...*

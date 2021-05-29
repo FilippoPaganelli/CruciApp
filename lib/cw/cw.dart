@@ -7,15 +7,19 @@ import 'def.dart';
 
 class CWPage extends StatefulWidget {
   final String thisCW;
+  final int rows;
+  final int cols;
 
-  CWPage(this.thisCW);
+  CWPage(this.thisCW, this.rows, this.cols);
 
   @override
-  _CWPageState createState() => new _CWPageState(thisCW);
+  _CWPageState createState() => new _CWPageState(thisCW, rows, cols);
 }
 
 class _CWPageState extends State<CWPage> {
   final String thisCW;
+  final int rows;
+  final int cols;
   bool isVertical = false;
   int lastTapped = -1;
   List<String> sol = [];
@@ -27,7 +31,9 @@ class _CWPageState extends State<CWPage> {
   String prevDir;
   String prevPath;
   bool prevFileExists = false;
-  List<ValueKey> contKeys = [];
+  Color normalCellColor = Colors.amber[50];
+  Color highlightedCellColor = Colors.amber[100];
+  Map<int, Color> cellsColors = Map(); // init in _loadStuff()
 
   @override
   void initState() {
@@ -43,7 +49,7 @@ class _CWPageState extends State<CWPage> {
     super.dispose();
   }
 
-  _CWPageState(this.thisCW);
+  _CWPageState(this.thisCW, this.rows, this.cols);
 
   @override
   Widget build(BuildContext context) {
@@ -61,7 +67,6 @@ class _CWPageState extends State<CWPage> {
         children: [
           ButtonBar(
             alignment: MainAxisAlignment.spaceEvenly,
-            //buttonPadding: EdgeInsets.only(bottom: 20),
             children: [
               ElevatedButton(
                 child: Text(
@@ -103,13 +108,10 @@ class _CWPageState extends State<CWPage> {
                         padding: const EdgeInsets.only(
                             left: 10, right: 10, top: 10, bottom: 10),
                         child: GridView.count(
-                          // MAKE 11 AND 110 VARIABLE ACCORDING TO CROSSWORD DIMENSIONS in cwinfos.json!
+                          // rows and cols are passed to this page as arguments from home.dart, through routeGenerator
                           crossAxisCount:
-                              11, // n° elements in each row! a.k.a. "cols" property in cwinfos.json!
-                          children: List.generate(110, (index) {
-                            // here 110 is rows*cols
-                            ValueKey _key = ValueKey(index);
-                            contKeys.add(_key);
+                              cols, // n° elements in each row! a.k.a. "cols" property in cwinfos.json!
+                          children: List.generate(rows * cols, (index) {
                             return FocusScope(
                                 node: _node,
                                 child: Container(
@@ -123,10 +125,9 @@ class _CWPageState extends State<CWPage> {
                                   child: sol[index] == '-'
                                       ? Text('')
                                       : Container(
-                                          key: _key,
-                                          color: Colors.amber[100],
+                                          color: cellsColors[index],
                                           child: TextField(
-                                            // set the initial text to the previous saved values
+                                            // set the initial text to previously saved values
                                             controller: _controllers[index]
                                               ..text =
                                                   userInputs[index.toString()],
@@ -165,7 +166,7 @@ class _CWPageState extends State<CWPage> {
                                               }
                                               lastTapped = index;
 
-                                              // highlist word
+                                              // highlight word
                                               _highlightWord(index);
                                             },
                                             onChanged: (text) {
@@ -337,6 +338,8 @@ class _CWPageState extends State<CWPage> {
     });
     for (var i = 0; i < sol.length; i++) {
       _controllers.add(new TextEditingController());
+      // init cellsColors map
+      cellsColors.putIfAbsent(i, () => normalCellColor);
     }
 
     return sols;
@@ -361,6 +364,24 @@ class _CWPageState extends State<CWPage> {
   }
 
   void _highlightWord(int index) {
-    // to be implemented
+    // get right definition/word (vertical or horizontal ones)
+    Definition d = def[index];
+    String defStr = isVertical ? d.vDef : d.hDef;
+    String word = isVertical ? d.vWord : d.hWord;
+
+    _resetCellsColors();
+    setState(() {
+      // highlight only word's cells
+      words[word].forEach((el) {
+        cellsColors.update(el, (value) => highlightedCellColor);
+      });
+    });
+  }
+
+  void _resetCellsColors() {
+    cellsColors.forEach((key, value) {
+      if (value == highlightedCellColor)
+        cellsColors.update(key, (value) => normalCellColor);
+    });
   }
 }
