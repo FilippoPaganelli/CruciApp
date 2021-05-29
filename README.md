@@ -1,6 +1,6 @@
 # CruciApp
 
-### This is a Flutter project for a cross-platform app for solving crosswords.
+### This is a Flutter project: a cross-platform app for solving crosswords.
 
 At the moment, the HomePage just renders a list of tiles, each showing information about a crossword (its number, title, description, language and *soon* its dimensions). 
 Here's a snapshot of the current working prototype:
