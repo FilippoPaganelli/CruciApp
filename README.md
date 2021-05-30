@@ -1,17 +1,17 @@
 # CruciApp
 
-### This is a Flutter project: a cross-platform app for solving crosswords.
+## This is a Flutter project: a cross-platform app for solving crosswords.
 
-### Home page:
+## Home page:
 renders a list of tiles, each showing information about a crossword (its number, title, description, language and its dimensions).
 
-### Side menu:
+## Side menu:
 accessed by tapping on a top-left button. Contains basic links to the [browser version](https://filippopaganelli.github.io/crosswords.html), to this repository, to [my website](https://filippopaganelli.github.io/) and e-mail.
 
-### Crossword page:
+## Crossword page:
 every crossword tile leads to its page. It contains three buttons for **saving, resetting and checking** the grid's state, the grid for the actual crossword.
 
-### Todo:
+## Todo:
 basic points:
 - [x] home page
 - [x] side menu
@@ -30,7 +30,7 @@ CWPage details:
 - [x] words insertion in both direction *(!issue with overwriting letters)*
 - [ ] proper definition showing
 
-### Snapshots:
+## Snapshots:
 
 | Home page  | Side menu | Cw page |
 | ------------- | ------------- | ------------- |
