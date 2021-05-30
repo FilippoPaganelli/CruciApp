@@ -2,19 +2,38 @@
 
 ### This is a Flutter project: a cross-platform app for solving crosswords.
 
-At the moment, the HomePage just renders a list of tiles, each showing information about a crossword (its number, title, description, language and *soon* its dimensions). 
-Here's a snapshot of the current working prototype:
+### Home page:
+renders a list of tiles, each showing information about a crossword (its number, title, description, language and its dimensions).
 
 <img src="snapshots/HomePage.jpg" alt="HomePage" width="150"/>
 
-There's also a side menu with basic links (to the [browser version](https://filippopaganelli.github.io/crosswords.html), to this repository, to [my website](https://filippopaganelli.github.io/) and e-mail).
-Here's a snapshot of the HomePage with the open menu:
+### Side menu:
+accessed by tapping on a top-left button. Contains basic links to the [browser version](https://filippopaganelli.github.io/crosswords.html), to this repository, to [my website](https://filippopaganelli.github.io/) and e-mail.
 
 <img src="snapshots/SideMenu.jpg" alt="SideMenu" width="150"/>
 
-Every crossword page has a grid for the actual crossword, three buttons for **saving, resetting and checking** the grid's state.
-Here's a snapshot of it *(note: words get highlighted on tap event, both vertically and horizontally):*
+### Crossword page:
+every crossword tile leads to its page. It contains three buttons for **saving, resetting and checking** the grid's state, the grid for the actual crossword.
 
 <img src="snapshots/CWPage.jpg" alt="CWPage" width="150"/>
+
+### Todo:
+basic points:
+- [x] home page
+- [x] side menu
+- [x] working links
+- [x] crossword page *(CWPage)*
+- [x] route generator
+- [x] toasts + vibrations
+- [ ] android splashscreen
+
+CWPage details:
+- [x] working Save button + previous state reading
+- [x] working Reset button + confirmation alert
+- [ ] working Check button + check alert
+- [x] blank grid with white/dark cells
+- [x] words *(vertical/horizontal)* highlighting
+- [x] words insertion in both direction *(!issue with overwriting letters)*
+- [ ] proper definition showing
 
 *Further updates will come soon...*
