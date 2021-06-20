@@ -24,11 +24,11 @@ basic points:
 CWPage details:
 - [x] working Save button + previous state reading
 - [x] working Reset button + confirmation alert
-- [ ] working Check button + check alert
+- [ ] working Check button + check info alert
 - [x] blank grid with white/dark cells
 - [x] words *(vertical/horizontal)* highlighting
 - [x] words insertion in both direction *(!issue with overwriting letters)*
-- [ ] proper definition showing
+- [ ] proper definition textbox
 
 ## Snapshots:
 
@@ -36,4 +36,4 @@ CWPage details:
 | ------------- | ------------- | ------------- |
 | <img src="snapshots/HomePage.jpg" alt="HomePage" width="150"/> | <img src="snapshots/SideMenu.jpg" alt="SideMenu" width="150"/> | <img src="snapshots/CWPage.jpg" alt="CWPage" width="150"/> |
 
-*Further updates will come soon...*
+*...further updates will come soon...*
