@@ -34,6 +34,7 @@ class _CWPageState extends State<CWPage> {
   Color normalCellColor = Colors.amber[50];
   Color highlightedCellColor = Colors.amber[100];
   Map<int, Color> cellsColors = Map(); // init in _loadStuff()
+  String shownDef = '';
 
   @override
   void initState() {
@@ -78,6 +79,9 @@ class _CWPageState extends State<CWPage> {
                 },
               ),
               ElevatedButton(
+                style: ButtonStyle(
+                    backgroundColor: MaterialStateColor.resolveWith(
+                        (states) => Colors.red[900])),
                 child: Text(
                   'Reset',
                   style: TextStyle(fontSize: 30),
@@ -87,6 +91,9 @@ class _CWPageState extends State<CWPage> {
                 },
               ),
               ElevatedButton(
+                style: ButtonStyle(
+                    backgroundColor: MaterialStateColor.resolveWith(
+                        (states) => Colors.green[700])),
                 child: Text(
                   'Check',
                   style: TextStyle(fontSize: 30),
@@ -96,6 +103,24 @@ class _CWPageState extends State<CWPage> {
                 },
               ),
             ],
+          ),
+          // definition textbox
+          Container(
+            padding: EdgeInsets.only(left: 10, right: 10, bottom: 5, top: 0),
+            alignment: Alignment.centerLeft,
+            child: Text.rich(
+              TextSpan(
+                style: TextStyle(fontSize: 25),
+                children: <TextSpan>[
+                  TextSpan(
+                      text: 'def: ',
+                      style: TextStyle(fontWeight: FontWeight.bold)),
+                  TextSpan(
+                      text: shownDef,
+                      style: TextStyle(fontStyle: FontStyle.italic)),
+                ],
+              ),
+            ),
           ),
           Container(
             child: new FutureBuilder(
@@ -108,9 +133,9 @@ class _CWPageState extends State<CWPage> {
                         padding: const EdgeInsets.only(
                             left: 10, right: 10, top: 10, bottom: 10),
                         child: GridView.count(
-                          // rows and cols are passed to this page as arguments from home.dart, through routeGenerator
+                          // rows and cols are passed to this page as arguments from "home.dart", through routeGenerator
                           crossAxisCount:
-                              cols, // n° elements in each row! a.k.a. "cols" property in cwinfos.json!
+                              cols, // n° elements in each row! a.k.a. "cols" property in "cwinfos.json"!
                           children: List.generate(rows * cols, (index) {
                             return FocusScope(
                                 node: _node,
@@ -129,8 +154,10 @@ class _CWPageState extends State<CWPage> {
                                           child: TextField(
                                             // set the initial text to previously saved values
                                             controller: _controllers[index]
-                                              ..text =
-                                                  userInputs[index.toString()],
+                                              ..text = userInputs.containsKey(
+                                                      index.toString())
+                                                  ? userInputs[index.toString()]
+                                                  : '',
                                             textCapitalization:
                                                 TextCapitalization.sentences,
                                             inputFormatters: [
@@ -212,7 +239,7 @@ class _CWPageState extends State<CWPage> {
         break;
       case "Check":
         {
-          // key stuff
+          // sols check...
         }
     }
   }
@@ -265,10 +292,29 @@ class _CWPageState extends State<CWPage> {
           style: TextStyle(fontSize: 25)),
       actions: [
         ElevatedButton(
+            style: ButtonStyle(
+                backgroundColor:
+                    MaterialStateColor.resolveWith((states) => Colors.white)),
             onPressed: () {
-              _controllers.forEach((ctrl) {
+              HapticFeedback.vibrate();
+              Navigator.of(context).pop();
+            },
+            child:
+                Text('No', style: TextStyle(fontSize: 23, color: Colors.blue))),
+        ElevatedButton(
+            onPressed: () {
+              /*_controllers.forEach((ctrl) {
                 ctrl.text = '';
+              });*/
+
+              setState(() {
+                List<TextEditingController> temp = [];
+                for (var i = 0; i < _controllers.length; i++) {
+                  temp.add(new TextEditingController(text: ''));
+                }
+                _controllers = temp;
               });
+
               userInputs.clear();
               ScaffoldMessenger.of(context).showSnackBar(
                 SnackBar(
@@ -280,12 +326,6 @@ class _CWPageState extends State<CWPage> {
               Navigator.of(context).pop();
             },
             child: Text('Yes', style: TextStyle(fontSize: 23))),
-        ElevatedButton(
-            onPressed: () {
-              HapticFeedback.vibrate();
-              Navigator.of(context).pop();
-            },
-            child: Text('No', style: TextStyle(fontSize: 23))),
       ],
     );
     showDialog(
@@ -369,8 +409,11 @@ class _CWPageState extends State<CWPage> {
     String defStr = isVertical ? d.vDef : d.hDef;
     String word = isVertical ? d.vWord : d.hWord;
 
+    // word colouring
     _resetCellsColors();
     setState(() {
+      // definition setting
+      shownDef = defStr;
       // highlight only word's cells
       words[word].forEach((el) {
         cellsColors.update(el, (value) => highlightedCellColor);
