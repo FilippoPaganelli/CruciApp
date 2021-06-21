@@ -28,7 +28,7 @@ CWPage details:
 - [x] blank grid with white/dark cells
 - [x] words *(vertical/horizontal)* highlighting
 - [x] words insertion in both direction *(!issue with overwriting letters)*
-- [ ] proper definition textbox
+- [x] proper definition textbox
 
 ## Snapshots:
 
