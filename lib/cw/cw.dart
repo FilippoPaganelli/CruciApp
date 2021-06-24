@@ -213,14 +213,8 @@ class _CWPageState extends State<CWPage> {
                                                     .remove(index.toString());
                                               } else if (text.contains(
                                                   new RegExp(r'[A-Z]'))) {
-                                                //print(text);
-                                                isVertical == false
-                                                    ? _node.focusInDirection(
-                                                        TraversalDirection
-                                                            .right)
-                                                    : _node.focusInDirection(
-                                                        TraversalDirection
-                                                            .down);
+                                                // focus on next cell according to direction
+                                                _focusNext(index);
                                               }
                                             },
                                           ),
@@ -239,6 +233,18 @@ class _CWPageState extends State<CWPage> {
         ],
       ),
     );
+  }
+
+  void _focusNext(int index) {
+    isVertical == false
+        ? {
+            if (sol[(index + 1) % (rows * cols)] != '-')
+              _node.focusInDirection(TraversalDirection.right)
+          }
+        : {
+            if (sol[(index + cols) % (rows * cols)] != '-')
+              _node.focusInDirection(TraversalDirection.down)
+          };
   }
 
   void _buttonPress(String button) {
