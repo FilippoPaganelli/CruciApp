@@ -23,6 +23,7 @@ basic points:
 - [x] crossword page *(CWPage)*
 - [x] route generator
 - [x] toasts + vibrations
+- [ ] completed cws badge *(?)*
 - [ ] android splashscreen
 
 CWPage details:
