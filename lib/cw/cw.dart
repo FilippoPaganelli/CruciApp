@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'dart:convert';
 import 'dart:io';
@@ -17,6 +19,7 @@ class CWPage extends StatefulWidget {
 }
 
 class _CWPageState extends State<CWPage> {
+  bool firstLoading = true;
   final String thisCW;
   final int rows;
   final int cols;
@@ -124,7 +127,7 @@ class _CWPageState extends State<CWPage> {
           ),
           Container(
             child: new FutureBuilder(
-                future: _loadStuff(),
+                future: firstLoading ? _loadStuff() : _getCurrentStuff(),
                 builder: (context, snapshot) {
                   if (snapshot.hasData) {
                     var sol = json.decode(snapshot.data.toString());
@@ -164,7 +167,11 @@ class _CWPageState extends State<CWPage> {
                                               LengthLimitingTextInputFormatter(
                                                   1),
                                             ],
-                                            cursorWidth: 5,
+                                            cursorWidth: 4,
+                                            cursorRadius: Radius.circular(2),
+                                            cursorHeight: 20,
+                                            enableInteractiveSelection: false,
+                                            textDirection: TextDirection.ltr,
                                             textAlign: TextAlign.center,
                                             decoration: InputDecoration(
                                                 contentPadding:
@@ -197,11 +204,16 @@ class _CWPageState extends State<CWPage> {
                                               _highlightWord(index);
                                             },
                                             onChanged: (text) {
+                                              lastTapped =
+                                                  -1; // prevents it from flipping direction on previous tap, when auto-jumping to next cell
                                               userInputs[index.toString()] =
                                                   text;
                                               if (text.isEmpty) {
-                                                userInputs.remove(index);
-                                              } else {
+                                                userInputs
+                                                    .remove(index.toString());
+                                              } else if (text.contains(
+                                                  new RegExp(r'[A-Z]'))) {
+                                                //print(text);
                                                 isVertical == false
                                                     ? _node.focusInDirection(
                                                         TraversalDirection
@@ -238,22 +250,79 @@ class _CWPageState extends State<CWPage> {
         _saveInputs();
         break;
       case "Check":
-        {
-          // sols check...
-        }
+        checkInputs();
+        break;
     }
+  }
+
+  void checkInputs() {
+    String msg = '';
+    String title = '';
+    int right = 0;
+    int wrong = 0;
+    int missing = 0;
+    bool win = false;
+    for (int i = 0; i < sol.length; i++) {
+      String el = sol[i].toUpperCase();
+      if (el != '-') {
+        if (userInputs.containsKey(i.toString())) {
+          if (userInputs[i.toString()] == el)
+            right++;
+          else {
+            wrong++;
+            missing++;
+            _controllers[i].text = '_';
+          }
+        } else
+          missing++;
+      }
+    }
+    if (missing == 0) {
+      title = 'Done!';
+      msg = "Congratulations.\nThere are no errors!";
+    } else {
+      title = 'Stats:';
+      msg = "Wrong: ${wrong}\nRemaining: ${missing}";
+    }
+    // notify user about statistics
+    AlertDialog alert = AlertDialog(
+      title: Text(title, style: TextStyle(fontSize: 35)),
+      content: Text(msg, style: TextStyle(fontSize: 25)),
+      actions: [
+        ElevatedButton(
+            onPressed: () {
+              if (missing == 0) {
+                ScaffoldMessenger.of(context).showSnackBar(
+                  SnackBar(
+                    content: Text('CW #$thisCW has been completed!',
+                        style: TextStyle(fontSize: 23)),
+                  ),
+                );
+              }
+              HapticFeedback.vibrate();
+              Navigator.of(context).pop();
+            },
+            child: Text('Ok', style: TextStyle(fontSize: 23))),
+      ],
+    );
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return alert;
+      },
+    );
   }
 
   void _saveInputs() {
     // only saves status if there are letters on the board
     if (userInputs.isNotEmpty) {
-      final data = json.encode(userInputs);
+      final writeData = json.encode(userInputs);
       File(prevPath).createSync(recursive: true);
       File prevFile = new File(prevPath);
-      prevFile.writeAsString(data).then((_) {
+      prevFile.writeAsString(writeData).then((_) {
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(
-            content: Text('Crossword #$thisCW has been saved...',
+            content: Text('CW #$thisCW has been saved...',
                 style: TextStyle(fontSize: 23)),
           ),
         );
@@ -265,7 +334,7 @@ class _CWPageState extends State<CWPage> {
       File(prevPath).delete().then((_) {
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(
-            content: Text('Crossword #$thisCW has been saved...',
+            content: Text('CW #$thisCW has been saved...',
                 style: TextStyle(fontSize: 23)),
           ),
         );
@@ -276,7 +345,7 @@ class _CWPageState extends State<CWPage> {
     else {
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
-          content: Text('Crossword #$thisCW has never been saved before...',
+          content: Text('CW #$thisCW has never been saved before...',
               style: TextStyle(fontSize: 23)),
         ),
       );
@@ -303,22 +372,19 @@ class _CWPageState extends State<CWPage> {
                 Text('No', style: TextStyle(fontSize: 23, color: Colors.blue))),
         ElevatedButton(
             onPressed: () {
-              /*_controllers.forEach((ctrl) {
-                ctrl.text = '';
-              });*/
-
               setState(() {
-                List<TextEditingController> temp = [];
-                for (var i = 0; i < _controllers.length; i++) {
-                  temp.add(new TextEditingController(text: ''));
-                }
-                _controllers = temp;
+                _controllers.forEach((ctrl) {
+                  ctrl.text = '';
+                });
               });
 
-              userInputs.clear();
+              setState(() {
+                userInputs.clear();
+              });
+
               ScaffoldMessenger.of(context).showSnackBar(
                 SnackBar(
-                  content: Text('Crossword #$thisCW has been reset...',
+                  content: Text('CW #$thisCW has been reset...',
                       style: TextStyle(fontSize: 23)),
                 ),
               );
@@ -337,6 +403,8 @@ class _CWPageState extends State<CWPage> {
   }
 
   Future<String> _loadStuff() async {
+    firstLoading = false;
+
     prevDir = await _localPath + "/$thisCW";
     prevPath = prevDir + "/prev.json";
 
@@ -378,6 +446,10 @@ class _CWPageState extends State<CWPage> {
     });
     for (var i = 0; i < sol.length; i++) {
       _controllers.add(new TextEditingController());
+      _controllers[i].addListener(() {
+        _controllers[i].selection =
+            TextSelection.collapsed(offset: _controllers[i].text.length);
+      });
       // init cellsColors map
       cellsColors.putIfAbsent(i, () => normalCellColor);
     }
@@ -409,16 +481,17 @@ class _CWPageState extends State<CWPage> {
     String defStr = isVertical ? d.vDef : d.hDef;
     String word = isVertical ? d.vWord : d.hWord;
 
-    // word colouring
-    _resetCellsColors();
-    setState(() {
-      // definition setting
-      shownDef = defStr;
-      // highlight only word's cells
-      words[word].forEach((el) {
-        cellsColors.update(el, (value) => highlightedCellColor);
+    if (word != '-') {
+      setState(() {
+        _resetCellsColors();
+        // definition setting
+        shownDef = defStr;
+        // highlight only word's cells
+        words[word].forEach((el) {
+          cellsColors.update(el, (value) => highlightedCellColor);
+        });
       });
-    });
+    }
   }
 
   void _resetCellsColors() {
@@ -426,5 +499,10 @@ class _CWPageState extends State<CWPage> {
       if (value == highlightedCellColor)
         cellsColors.update(key, (value) => normalCellColor);
     });
+  }
+
+  _getCurrentStuff() {
+    // prevents 'setState' to read again from disk
+    return;
   }
 }

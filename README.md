@@ -24,11 +24,11 @@ basic points:
 CWPage details:
 - [x] working Save button + previous state reading
 - [x] working Reset button + confirmation alert
-- [ ] working Check button + check info alert
+- [x] working Check button + check info alert
 - [x] blank grid with white/dark cells
 - [x] words *(vertical/horizontal)* highlighting
 - [x] words insertion in both direction *(!issue with overwriting letters)*
-- [ ] proper definition textbox
+- [x] proper definition textbox
 
 ## Snapshots:
 
