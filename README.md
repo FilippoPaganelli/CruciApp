@@ -2,7 +2,7 @@
 
 ## This is a Flutter project: a cross-platform app for solving crosswords.
 
-### UPDATE: the app is almost completed! Just needs more crosswords and minor features!
+#### *UPDATE: the app is almost completed! Just needs more crosswords and minor features!*
 
 ## Home page:
 renders a list of tiles, each showing information about a crossword: **its number, title, description, language and dimensions).**
