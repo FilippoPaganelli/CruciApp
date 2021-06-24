@@ -278,6 +278,7 @@ class _CWPageState extends State<CWPage> {
       }
     }
     if (missing == 0) {
+      // winning condition
       title = 'Done!';
       msg = "Congratulations.\nThere are no errors!";
     } else {
