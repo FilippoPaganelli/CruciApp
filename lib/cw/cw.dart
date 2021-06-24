@@ -258,17 +258,13 @@ class _CWPageState extends State<CWPage> {
   void checkInputs() {
     String msg = '';
     String title = '';
-    int right = 0;
     int wrong = 0;
     int missing = 0;
-    bool win = false;
     for (int i = 0; i < sol.length; i++) {
       String el = sol[i].toUpperCase();
       if (el != '-') {
         if (userInputs.containsKey(i.toString())) {
-          if (userInputs[i.toString()] == el)
-            right++;
-          else {
+          if (userInputs[i.toString()] != el) {
             wrong++;
             missing++;
             _controllers[i].text = '_';
