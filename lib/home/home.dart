@@ -34,7 +34,7 @@ class HomePage extends StatelessWidget {
                     SnackBar(
                       content: Text(
                         "Choose one from the list...",
-                        style: TextStyle(fontSize: 23),
+                        style: TextStyle(fontSize: 20),
                       ),
                     ),
                   );
@@ -65,7 +65,7 @@ class HomePage extends StatelessWidget {
                           'Play Crosswords',
                           style: TextStyle(
                               color: Colors.white,
-                              fontSize: 35,
+                              fontSize: 32,
                               fontWeight: FontWeight.bold),
                         ),
                       ),
@@ -112,12 +112,12 @@ class HomePage extends StatelessWidget {
                           title: Text(
                             data[index]["name"],
                             style: TextStyle(
-                                fontSize: 22, fontWeight: FontWeight.bold),
+                                fontSize: 20, fontWeight: FontWeight.bold),
                           ),
                           minVerticalPadding: 5,
                           subtitle: Text(
                             '\n' + data[index]["description"],
-                            style: TextStyle(fontSize: 18),
+                            style: TextStyle(fontSize: 17),
                           ),
                           trailing: Column(
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -126,19 +126,16 @@ class HomePage extends StatelessWidget {
                                 data[index]["language"],
                                 style: TextStyle(
                                     color: Colors.blueGrey[600],
-                                    fontSize: 17,
+                                    fontSize: 16,
                                     fontWeight: FontWeight.bold),
                               ),
-                              /*SizedBox(
-                                height: 20,
-                              ),*/
                               Text(
                                 data[index]["rows"].toString() +
                                     ' x ' +
                                     data[index]["cols"].toString(),
                                 style: TextStyle(
                                     color: Colors.blueGrey[600],
-                                    fontSize: 17,
+                                    fontSize: 16,
                                     fontWeight: FontWeight.bold),
                               ),
                             ],
@@ -162,7 +159,7 @@ class HomePage extends StatelessWidget {
                                         "#${index + 1}",
                                         style: TextStyle(
                                             color: Colors.blueGrey[600],
-                                            fontSize: 32),
+                                            fontSize: 28),
                                       ),
                                     ],
                                   )),

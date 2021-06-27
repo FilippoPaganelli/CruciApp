@@ -75,7 +75,7 @@ class _CWPageState extends State<CWPage> {
               ElevatedButton(
                 child: Text(
                   'Save',
-                  style: TextStyle(fontSize: 30),
+                  style: TextStyle(fontSize: 25),
                 ),
                 onPressed: () {
                   _buttonPress("Save");
@@ -87,7 +87,7 @@ class _CWPageState extends State<CWPage> {
                         (states) => Colors.red[900])),
                 child: Text(
                   'Reset',
-                  style: TextStyle(fontSize: 30),
+                  style: TextStyle(fontSize: 25),
                 ),
                 onPressed: () {
                   _buttonPress("Reset");
@@ -99,7 +99,7 @@ class _CWPageState extends State<CWPage> {
                         (states) => Colors.green[700])),
                 child: Text(
                   'Check',
-                  style: TextStyle(fontSize: 30),
+                  style: TextStyle(fontSize: 25),
                 ),
                 onPressed: () {
                   _buttonPress("Check");
@@ -113,7 +113,7 @@ class _CWPageState extends State<CWPage> {
             alignment: Alignment.centerLeft,
             child: Text.rich(
               TextSpan(
-                style: TextStyle(fontSize: 25),
+                style: TextStyle(fontSize: 22),
                 children: <TextSpan>[
                   TextSpan(
                       text: 'def: ',
@@ -189,7 +189,7 @@ class _CWPageState extends State<CWPage> {
                                             textAlignVertical:
                                                 TextAlignVertical.center,
                                             style: TextStyle(
-                                                fontSize: 28,
+                                                fontSize: 26,
                                                 fontWeight: FontWeight.bold,
                                                 decoration:
                                                     TextDecoration.none),
@@ -236,6 +236,7 @@ class _CWPageState extends State<CWPage> {
   }
 
   void _focusNext(int index) {
+    // code for preventing auto-jumps over blue cells
     isVertical == false
         ? {
             if (sol[(index + 1) % (rows * cols)] != '-')
@@ -289,8 +290,8 @@ class _CWPageState extends State<CWPage> {
     }
     // notify user about statistics
     AlertDialog alert = AlertDialog(
-      title: Text(title, style: TextStyle(fontSize: 35)),
-      content: Text(msg, style: TextStyle(fontSize: 25)),
+      title: Text(title, style: TextStyle(fontSize: 30)),
+      content: Text(msg, style: TextStyle(fontSize: 23)),
       actions: [
         ElevatedButton(
             onPressed: () {
@@ -298,14 +299,14 @@ class _CWPageState extends State<CWPage> {
                 ScaffoldMessenger.of(context).showSnackBar(
                   SnackBar(
                     content: Text('CW #$thisCW has been completed!',
-                        style: TextStyle(fontSize: 23)),
+                        style: TextStyle(fontSize: 20)),
                   ),
                 );
               }
               HapticFeedback.vibrate();
               Navigator.of(context).pop();
             },
-            child: Text('Ok', style: TextStyle(fontSize: 23))),
+            child: Text('Ok', style: TextStyle(fontSize: 22))),
       ],
     );
     showDialog(
@@ -326,7 +327,7 @@ class _CWPageState extends State<CWPage> {
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(
             content: Text('CW #$thisCW has been saved...',
-                style: TextStyle(fontSize: 23)),
+                style: TextStyle(fontSize: 20)),
           ),
         );
         HapticFeedback.vibrate();
@@ -338,7 +339,7 @@ class _CWPageState extends State<CWPage> {
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(
             content: Text('CW #$thisCW has been saved...',
-                style: TextStyle(fontSize: 23)),
+                style: TextStyle(fontSize: 20)),
           ),
         );
         HapticFeedback.vibrate();
@@ -349,7 +350,7 @@ class _CWPageState extends State<CWPage> {
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
           content: Text('CW #$thisCW has never been saved before...',
-              style: TextStyle(fontSize: 23)),
+              style: TextStyle(fontSize: 20)),
         ),
       );
       HapticFeedback.vibrate();
@@ -359,9 +360,9 @@ class _CWPageState extends State<CWPage> {
 // shows an alert dialog asking for Reset confirmation
   void _askForReset() {
     AlertDialog alert = AlertDialog(
-      title: Text("Reset!", style: TextStyle(fontSize: 35)),
+      title: Text("Reset!", style: TextStyle(fontSize: 30)),
       content: Text("Are you sure? Any unsaved changes will be lost.",
-          style: TextStyle(fontSize: 25)),
+          style: TextStyle(fontSize: 23)),
       actions: [
         ElevatedButton(
             style: ButtonStyle(
@@ -372,7 +373,7 @@ class _CWPageState extends State<CWPage> {
               Navigator.of(context).pop();
             },
             child:
-                Text('No', style: TextStyle(fontSize: 23, color: Colors.blue))),
+                Text('No', style: TextStyle(fontSize: 22, color: Colors.blue))),
         ElevatedButton(
             onPressed: () {
               setState(() {
@@ -388,13 +389,13 @@ class _CWPageState extends State<CWPage> {
               ScaffoldMessenger.of(context).showSnackBar(
                 SnackBar(
                   content: Text('CW #$thisCW has been reset...',
-                      style: TextStyle(fontSize: 23)),
+                      style: TextStyle(fontSize: 20)),
                 ),
               );
               HapticFeedback.vibrate();
               Navigator.of(context).pop();
             },
-            child: Text('Yes', style: TextStyle(fontSize: 23))),
+            child: Text('Yes', style: TextStyle(fontSize: 22))),
       ],
     );
     showDialog(
