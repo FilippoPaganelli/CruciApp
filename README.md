@@ -1,4 +1,4 @@
-#### ***UPDATE: the app is almost completed! Just needs more crosswords and minor features!***
+#### ***UPDATE: app is almost completed! Just needs more crosswords and minor features!***
 
 # CruciApp
 
