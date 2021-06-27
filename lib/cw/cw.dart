@@ -1,5 +1,3 @@
-import 'dart:math';
-
 import 'package:flutter/material.dart';
 import 'dart:convert';
 import 'dart:io';
@@ -64,7 +62,7 @@ class _CWPageState extends State<CWPage> {
         title: Text(
           'Crossword #$thisCW',
           style: TextStyle(
-              fontSize: 25, fontWeight: FontWeight.normal, color: Colors.white),
+              fontSize: 22, fontWeight: FontWeight.bold, color: Colors.white),
         ),
       ),
       body: Column(
@@ -75,7 +73,7 @@ class _CWPageState extends State<CWPage> {
               ElevatedButton(
                 child: Text(
                   'Save',
-                  style: TextStyle(fontSize: 25),
+                  style: TextStyle(fontSize: 20),
                 ),
                 onPressed: () {
                   _buttonPress("Save");
@@ -87,7 +85,7 @@ class _CWPageState extends State<CWPage> {
                         (states) => Colors.red[900])),
                 child: Text(
                   'Reset',
-                  style: TextStyle(fontSize: 25),
+                  style: TextStyle(fontSize: 20),
                 ),
                 onPressed: () {
                   _buttonPress("Reset");
@@ -99,7 +97,7 @@ class _CWPageState extends State<CWPage> {
                         (states) => Colors.green[700])),
                 child: Text(
                   'Check',
-                  style: TextStyle(fontSize: 25),
+                  style: TextStyle(fontSize: 20),
                 ),
                 onPressed: () {
                   _buttonPress("Check");
@@ -113,7 +111,7 @@ class _CWPageState extends State<CWPage> {
             alignment: Alignment.centerLeft,
             child: Text.rich(
               TextSpan(
-                style: TextStyle(fontSize: 22),
+                style: TextStyle(fontSize: 18),
                 children: <TextSpan>[
                   TextSpan(
                       text: 'def: ',
@@ -189,7 +187,7 @@ class _CWPageState extends State<CWPage> {
                                             textAlignVertical:
                                                 TextAlignVertical.center,
                                             style: TextStyle(
-                                                fontSize: 26,
+                                                fontSize: 23,
                                                 fontWeight: FontWeight.bold,
                                                 decoration:
                                                     TextDecoration.none),
@@ -215,6 +213,9 @@ class _CWPageState extends State<CWPage> {
                                                   new RegExp(r'[A-Z]'))) {
                                                 // focus on next cell according to direction
                                                 _focusNext(index);
+                                              } else {
+                                                // cell contains not allowed characters
+                                                _controllers[index].text = "";
                                               }
                                             },
                                           ),
@@ -290,8 +291,8 @@ class _CWPageState extends State<CWPage> {
     }
     // notify user about statistics
     AlertDialog alert = AlertDialog(
-      title: Text(title, style: TextStyle(fontSize: 30)),
-      content: Text(msg, style: TextStyle(fontSize: 23)),
+      title: Text(title, style: TextStyle(fontSize: 25)),
+      content: Text(msg, style: TextStyle(fontSize: 18)),
       actions: [
         ElevatedButton(
             onPressed: () {
@@ -299,14 +300,14 @@ class _CWPageState extends State<CWPage> {
                 ScaffoldMessenger.of(context).showSnackBar(
                   SnackBar(
                     content: Text('CW #$thisCW has been completed!',
-                        style: TextStyle(fontSize: 20)),
+                        style: TextStyle(fontSize: 15)),
                   ),
                 );
               }
               HapticFeedback.vibrate();
               Navigator.of(context).pop();
             },
-            child: Text('Ok', style: TextStyle(fontSize: 22))),
+            child: Text('Ok', style: TextStyle(fontSize: 18))),
       ],
     );
     showDialog(
@@ -327,7 +328,7 @@ class _CWPageState extends State<CWPage> {
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(
             content: Text('CW #$thisCW has been saved...',
-                style: TextStyle(fontSize: 20)),
+                style: TextStyle(fontSize: 15)),
           ),
         );
         HapticFeedback.vibrate();
@@ -339,7 +340,7 @@ class _CWPageState extends State<CWPage> {
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(
             content: Text('CW #$thisCW has been saved...',
-                style: TextStyle(fontSize: 20)),
+                style: TextStyle(fontSize: 15)),
           ),
         );
         HapticFeedback.vibrate();
@@ -350,7 +351,7 @@ class _CWPageState extends State<CWPage> {
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
           content: Text('CW #$thisCW has never been saved before...',
-              style: TextStyle(fontSize: 20)),
+              style: TextStyle(fontSize: 15)),
         ),
       );
       HapticFeedback.vibrate();
@@ -360,9 +361,9 @@ class _CWPageState extends State<CWPage> {
 // shows an alert dialog asking for Reset confirmation
   void _askForReset() {
     AlertDialog alert = AlertDialog(
-      title: Text("Reset!", style: TextStyle(fontSize: 30)),
+      title: Text("Reset!", style: TextStyle(fontSize: 25)),
       content: Text("Are you sure? Any unsaved changes will be lost.",
-          style: TextStyle(fontSize: 23)),
+          style: TextStyle(fontSize: 18)),
       actions: [
         ElevatedButton(
             style: ButtonStyle(
@@ -373,7 +374,7 @@ class _CWPageState extends State<CWPage> {
               Navigator.of(context).pop();
             },
             child:
-                Text('No', style: TextStyle(fontSize: 22, color: Colors.blue))),
+                Text('No', style: TextStyle(fontSize: 18, color: Colors.blue))),
         ElevatedButton(
             onPressed: () {
               setState(() {
@@ -389,13 +390,13 @@ class _CWPageState extends State<CWPage> {
               ScaffoldMessenger.of(context).showSnackBar(
                 SnackBar(
                   content: Text('CW #$thisCW has been reset...',
-                      style: TextStyle(fontSize: 20)),
+                      style: TextStyle(fontSize: 15)),
                 ),
               );
               HapticFeedback.vibrate();
               Navigator.of(context).pop();
             },
-            child: Text('Yes', style: TextStyle(fontSize: 22))),
+            child: Text('Yes', style: TextStyle(fontSize: 18))),
       ],
     );
     showDialog(

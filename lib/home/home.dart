@@ -11,11 +11,17 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       drawer: MyDrawer(),
       appBar: AppBar(
+        automaticallyImplyLeading: true,
+        //leading: Icon(Icons.menu_rounded),
+        /*leading: IconButton(
+          icon: Icon(Icons.menu_rounded),
+          onPressed: () => Scaffold.of(context).openDrawer(),
+        ),*/
         backgroundColor: Color.fromRGBO(55, 101, 176, 1),
         title: Text(
           'CruciApp',
           style: TextStyle(
-              fontSize: 35, fontWeight: FontWeight.w600, color: Colors.white),
+              fontSize: 28, fontWeight: FontWeight.w600, color: Colors.white),
         ),
       ),
       body: Center(
@@ -34,7 +40,7 @@ class HomePage extends StatelessWidget {
                     SnackBar(
                       content: Text(
                         "Choose one from the list...",
-                        style: TextStyle(fontSize: 20),
+                        style: TextStyle(fontSize: 15),
                       ),
                     ),
                   );
@@ -65,7 +71,7 @@ class HomePage extends StatelessWidget {
                           'Play Crosswords',
                           style: TextStyle(
                               color: Colors.white,
-                              fontSize: 32,
+                              fontSize: 28,
                               fontWeight: FontWeight.bold),
                         ),
                       ),
@@ -112,12 +118,12 @@ class HomePage extends StatelessWidget {
                           title: Text(
                             data[index]["name"],
                             style: TextStyle(
-                                fontSize: 20, fontWeight: FontWeight.bold),
+                                fontSize: 17, fontWeight: FontWeight.bold),
                           ),
                           minVerticalPadding: 5,
                           subtitle: Text(
                             '\n' + data[index]["description"],
-                            style: TextStyle(fontSize: 17),
+                            style: TextStyle(fontSize: 15),
                           ),
                           trailing: Column(
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -126,7 +132,7 @@ class HomePage extends StatelessWidget {
                                 data[index]["language"],
                                 style: TextStyle(
                                     color: Colors.blueGrey[600],
-                                    fontSize: 16,
+                                    fontSize: 13,
                                     fontWeight: FontWeight.bold),
                               ),
                               Text(
@@ -135,7 +141,7 @@ class HomePage extends StatelessWidget {
                                     data[index]["cols"].toString(),
                                 style: TextStyle(
                                     color: Colors.blueGrey[600],
-                                    fontSize: 16,
+                                    fontSize: 13,
                                     fontWeight: FontWeight.bold),
                               ),
                             ],
@@ -148,7 +154,6 @@ class HomePage extends StatelessWidget {
                                   height: 56,
                                   decoration: BoxDecoration(
                                     shape: BoxShape.circle,
-                                    // RANDOM COLOUR:
                                     color: Color(0xff083663).withAlpha(45),
                                   ),
                                   child: Column(
@@ -159,7 +164,7 @@ class HomePage extends StatelessWidget {
                                         "#${index + 1}",
                                         style: TextStyle(
                                             color: Colors.blueGrey[600],
-                                            fontSize: 28),
+                                            fontSize: 25),
                                       ),
                                     ],
                                   )),

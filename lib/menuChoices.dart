@@ -4,7 +4,6 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class MyDrawer extends StatelessWidget {
-  static const url_cw = 'https://filippopaganelli.github.io/crosswords.html';
   @override
   Widget build(BuildContext context) {
     return Drawer(
@@ -35,7 +34,7 @@ class MyDrawer extends StatelessWidget {
                             child: Text(
                               'Info',
                               style: TextStyle(
-                                  fontSize: 35,
+                                  fontSize: 28,
                                   fontWeight: FontWeight.w600,
                                   color: Colors.white),
                             ),
@@ -51,14 +50,14 @@ class MyDrawer extends StatelessWidget {
                 ListTile(
                   leading: FaIcon(
                     FontAwesomeIcons.jsSquare,
-                    size: 27,
+                    size: 25,
                     color: Color.fromRGBO(55, 101, 176, 1),
                   ),
                   contentPadding:
                       EdgeInsets.only(top: 5, bottom: 5, left: 20, right: 20),
                   title: Text(
                     'Browser version',
-                    style: TextStyle(fontSize: 25, color: Colors.grey[700]),
+                    style: TextStyle(fontSize: 20, color: Colors.grey[700]),
                   ),
                   //trailing:
                   onTap: () => _launchBrowserVersion(context),
@@ -70,14 +69,14 @@ class MyDrawer extends StatelessWidget {
                 ListTile(
                   leading: FaIcon(
                     FontAwesomeIcons.githubSquare,
-                    size: 27,
+                    size: 25,
                     color: Color.fromRGBO(55, 101, 176, 1),
                   ),
                   contentPadding:
                       EdgeInsets.only(top: 5, bottom: 5, left: 20, right: 20),
                   title: Text(
                     'Code on GitHub',
-                    style: TextStyle(fontSize: 25, color: Colors.grey[700]),
+                    style: TextStyle(fontSize: 20, color: Colors.grey[700]),
                   ),
                   //trailing:
                   onTap: () => _launchGithub(context),
@@ -89,14 +88,14 @@ class MyDrawer extends StatelessWidget {
                 ListTile(
                   leading: Icon(
                     Icons.web_rounded,
-                    size: 28,
+                    size: 26,
                     color: Color.fromRGBO(55, 101, 176, 1),
                   ),
                   contentPadding:
-                      EdgeInsets.only(top: 5, bottom: 5, left: 17, right: 20),
+                      EdgeInsets.only(top: 5, bottom: 5, left: 18, right: 20),
                   title: Text(
                     'My website',
-                    style: TextStyle(fontSize: 25, color: Colors.grey[700]),
+                    style: TextStyle(fontSize: 20, color: Colors.grey[700]),
                   ),
                   //trailing: ,
                   onTap: () => _launchMyWebsite(context),
@@ -108,14 +107,14 @@ class MyDrawer extends StatelessWidget {
                 ListTile(
                   leading: Icon(
                     Icons.email_rounded,
-                    size: 28,
+                    size: 26,
                     color: Color.fromRGBO(55, 101, 176, 1),
                   ),
                   contentPadding:
                       EdgeInsets.only(top: 5, bottom: 5, left: 17, right: 20),
                   title: Text(
                     'Get in touch',
-                    style: TextStyle(fontSize: 25, color: Colors.grey[700]),
+                    style: TextStyle(fontSize: 20, color: Colors.grey[700]),
                   ),
                   //trailing: ,
                   onTap: () => _launchEmail(context),
@@ -132,7 +131,7 @@ class MyDrawer extends StatelessWidget {
             padding: EdgeInsets.only(bottom: 7, left: 10),
             child: Text('App by: Filippo Paganelli',
                 style: TextStyle(
-                    fontSize: 18,
+                    fontSize: 15,
                     color: Colors.grey[500],
                     fontStyle: FontStyle.italic)),
           ),
@@ -183,8 +182,8 @@ _launchError(String url, BuildContext context) {
   ScaffoldMessenger.of(context).showSnackBar(
     SnackBar(
       content: Text(
-        "Could not open: \"$url\"...",
-        style: TextStyle(fontSize: 18),
+        "Could not open: \"$url\"!",
+        style: TextStyle(fontSize: 15),
       ),
     ),
   );
