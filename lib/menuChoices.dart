@@ -49,17 +49,18 @@ class MyDrawer extends StatelessWidget {
                   height: 10,
                 ),
                 ListTile(
+                  leading: FaIcon(
+                    FontAwesomeIcons.jsSquare,
+                    size: 27,
+                    color: Color.fromRGBO(55, 101, 176, 1),
+                  ),
                   contentPadding:
                       EdgeInsets.only(top: 5, bottom: 5, left: 20, right: 20),
                   title: Text(
                     'Browser version',
-                    style: TextStyle(fontSize: 30, color: Colors.grey[700]),
+                    style: TextStyle(fontSize: 25, color: Colors.grey[700]),
                   ),
-                  trailing: FaIcon(
-                    FontAwesomeIcons.jsSquare,
-                    size: 30,
-                    color: Color.fromRGBO(55, 101, 176, 1),
-                  ),
+                  //trailing:
                   onTap: () => _launchBrowserVersion(context),
                 ),
                 Divider(
@@ -67,18 +68,18 @@ class MyDrawer extends StatelessWidget {
                   thickness: 1,
                 ),
                 ListTile(
-                  // CHANGE LINK WITH ACTUAL APP CODE ON GITHUB------------------------!!!!!!!!!!!!
+                  leading: FaIcon(
+                    FontAwesomeIcons.githubSquare,
+                    size: 27,
+                    color: Color.fromRGBO(55, 101, 176, 1),
+                  ),
                   contentPadding:
                       EdgeInsets.only(top: 5, bottom: 5, left: 20, right: 20),
                   title: Text(
                     'Code on GitHub',
-                    style: TextStyle(fontSize: 30, color: Colors.grey[700]),
+                    style: TextStyle(fontSize: 25, color: Colors.grey[700]),
                   ),
-                  trailing: FaIcon(
-                    FontAwesomeIcons.githubSquare,
-                    size: 30,
-                    color: Color.fromRGBO(55, 101, 176, 1),
-                  ),
+                  //trailing:
                   onTap: () => _launchGithub(context),
                 ),
                 Divider(
@@ -86,17 +87,18 @@ class MyDrawer extends StatelessWidget {
                   thickness: 1,
                 ),
                 ListTile(
-                  contentPadding:
-                      EdgeInsets.only(top: 5, bottom: 5, left: 20, right: 20),
-                  title: Text(
-                    'My website',
-                    style: TextStyle(fontSize: 30, color: Colors.grey[700]),
-                  ),
-                  trailing: Icon(
+                  leading: Icon(
                     Icons.web_rounded,
-                    size: 32,
+                    size: 28,
                     color: Color.fromRGBO(55, 101, 176, 1),
                   ),
+                  contentPadding:
+                      EdgeInsets.only(top: 5, bottom: 5, left: 17, right: 20),
+                  title: Text(
+                    'My website',
+                    style: TextStyle(fontSize: 25, color: Colors.grey[700]),
+                  ),
+                  //trailing: ,
                   onTap: () => _launchMyWebsite(context),
                 ),
                 Divider(
@@ -104,17 +106,18 @@ class MyDrawer extends StatelessWidget {
                   thickness: 1,
                 ),
                 ListTile(
-                  contentPadding:
-                      EdgeInsets.only(top: 5, bottom: 5, left: 20, right: 20),
-                  title: Text(
-                    'Get in touch',
-                    style: TextStyle(fontSize: 30, color: Colors.grey[700]),
-                  ),
-                  trailing: Icon(
+                  leading: Icon(
                     Icons.email_rounded,
-                    size: 32,
+                    size: 28,
                     color: Color.fromRGBO(55, 101, 176, 1),
                   ),
+                  contentPadding:
+                      EdgeInsets.only(top: 5, bottom: 5, left: 17, right: 20),
+                  title: Text(
+                    'Get in touch',
+                    style: TextStyle(fontSize: 25, color: Colors.grey[700]),
+                  ),
+                  //trailing: ,
                   onTap: () => _launchEmail(context),
                 ),
                 Divider(
@@ -129,7 +132,7 @@ class MyDrawer extends StatelessWidget {
             padding: EdgeInsets.only(bottom: 7, left: 10),
             child: Text('App by: Filippo Paganelli',
                 style: TextStyle(
-                    fontSize: 20,
+                    fontSize: 18,
                     color: Colors.grey[500],
                     fontStyle: FontStyle.italic)),
           ),
