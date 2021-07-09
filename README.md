@@ -7,7 +7,7 @@
 
 
 ## Home page:
-renders a list of tiles, each showing information about a crossword: **its number, title, description, language and dimensions).**
+renders a list of tiles, each showing information about a crossword: its **number, title, description, language** and **dimensions.**
 
 ## Side menu:
 accessed by tapping on a top-left button. Contains basic links to the [browser version](https://filippopaganelli.github.io/crosswords.html), to this repository, to [my website](https://filippopaganelli.github.io/) and e-mail.
