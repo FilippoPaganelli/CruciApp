@@ -1,0 +1,552 @@
+[
+  {
+    "index": 0,
+    "h_clue": {"def":"sinonimo di \"spargerà\"", "word":"disperdera"},
+    "v_clue": {"def":"tipo di corrente elettrica", "word":"dc"}
+  },
+  {
+    "index": 1,
+    "h_clue": {"def":"sinonimo di \"spargerà\"", "word":"disperdera"},
+    "v_clue": {"def":"Christian, apprezzato doppiatore italiano", "word":"iansante"}
+  },
+  {
+    "index": 2,
+    "h_clue": {"def":"sinonimo di \"spargerà\"", "word":"disperdera"},
+    "v_clue": {"def":"malattia degenerativa che interessa i muscoli", "word":"sla"}
+  },
+  {
+    "index": 3,
+    "h_clue": {"def":"sinonimo di \"spargerà\"", "word":"disperdera"},
+    "v_clue": {"def":"vi fu eretta la prima sede della Apple Computer...in breve", "word":"pasa"}
+  },
+  {
+    "index": 4,
+    "h_clue": {"def":"sinonimo di \"spargerà\"", "word":"disperdera"},
+    "v_clue": {"def":"minerale dal colore sanguigno", "word":"ematite"}
+  },
+  {
+    "index": 5,
+    "h_clue": {"def":"sinonimo di \"spargerà\"", "word":"disperdera"},
+    "v_clue": {"def":"piccolo mammifero portatore di malattie", "word":"ratto"}
+  },
+  {
+    "index": 6,
+    "h_clue": {"def":"sinonimo di \"spargerà\"", "word":"disperdera"},
+    "v_clue": {"def":"condizione fisica che disidrata", "word":"diarrea"}
+  },
+  {
+    "index": 7,
+    "h_clue": {"def":"sinonimo di \"spargerà\"", "word":"disperdera"},
+    "v_clue": {"def":"iniziali di Olmi, regista de \"Il mestiere delle armi\"", "word":"eo"}
+  },
+  {
+    "index": 8,
+    "h_clue": {"def":"sinonimo di \"spargerà\"", "word":"disperdera"},
+    "v_clue": {"def":"-", "word":"-"}
+  },
+  {
+    "index": 9,
+    "h_clue": {"def":"sinonimo di \"spargerà\"", "word":"disperdera"},
+    "v_clue": {"def":"quando non si può avere, un bambino si...", "word":"adotta"}
+  },
+  {
+    "index": 10,
+    "h_clue": {"def":"-", "word":"-"},
+    "v_clue": {"def":"-", "word":"-"}
+  },
+  {
+    "index": 11,
+    "h_clue": {"def":"si usava per scrivere", "word":"calamaio"},
+    "v_clue": {"def":"tipo di corrente elettrica", "word":"dc"}
+  },
+  {
+    "index": 12,
+    "h_clue": {"def":"si usava per scrivere", "word":"calamaio"},
+    "v_clue": {"def":"Christian, apprezzato doppiatore italiano", "word":"iansante"}
+  },
+  {
+    "index": 13,
+    "h_clue": {"def":"si usava per scrivere", "word":"calamaio"},
+    "v_clue": {"def":"malattia degenerativa che interessa i muscoli", "word":"sla"}
+  },
+  {
+    "index": 14,
+    "h_clue": {"def":"si usava per scrivere", "word":"calamaio"},
+    "v_clue": {"def":"vi fu eretta la prima sede della Apple Computer...in breve", "word":"pasa"}
+  },
+  {
+    "index": 15,
+    "h_clue": {"def":"si usava per scrivere", "word":"calamaio"},
+    "v_clue": {"def":"minerale dal colore sanguigno", "word":"ematite"}
+  },
+  {
+    "index": 16,
+    "h_clue": {"def":"si usava per scrivere", "word":"calamaio"},
+    "v_clue": {"def":"piccolo mammifero portatore di malattie", "word":"ratto"}
+  },
+  {
+    "index": 17,
+    "h_clue": {"def":"si usava per scrivere", "word":"calamaio"},
+    "v_clue": {"def":"condizione fisica che disidrata", "word":"diarrea"}
+  },
+  {
+    "index": 18,
+    "h_clue": {"def":"si usava per scrivere", "word":"calamaio"},
+    "v_clue": {"def":"iniziali di Olmi, regista de \"Il mestiere delle armi\"", "word":"eo"}
+  },
+  {
+    "index": 19,
+    "h_clue": {"def":"-", "word":"-"},
+    "v_clue": {"def":"-", "word":"-"}
+  },
+  {
+    "index": 20,
+    "h_clue": {"def":"affermazione di Vladimir Putin", "word":"da"},
+    "v_clue": {"def":"quando non si può avere, un bambino si...", "word":"adotta"}
+  },
+  {
+    "index": 21,
+    "h_clue": {"def":"affermazione di Vladimir Putin", "word":"da"},
+    "v_clue": {"def":"l'uomo bianco per cui Hitler simpatizzava", "word":"ariano"}
+  },
+  {
+    "index": 22,
+    "h_clue": {"def":"-", "word":"-"},
+    "v_clue": {"def":"-", "word":"-"}
+  },
+  {
+    "index": 23,
+    "h_clue": {"def":"in gergo: \"trovata\", \"scovata\"", "word":"nasata"},
+    "v_clue": {"def":"Christian, apprezzato doppiatore italiano", "word":"iansante"}
+  },
+  {
+    "index": 24,
+    "h_clue": {"def":"in gergo: \"trovata\", \"scovata\"", "word":"nasata"},
+    "v_clue": {"def":"malattia degenerativa che interessa i muscoli", "word":"sla"}
+  },
+  {
+    "index": 25,
+    "h_clue": {"def":"in gergo: \"trovata\", \"scovata\"", "word":"nasata"},
+    "v_clue": {"def":"vi fu eretta la prima sede della Apple Computer...in breve", "word":"pasa"}
+  },
+  {
+    "index": 26,
+    "h_clue": {"def":"in gergo: \"trovata\", \"scovata\"", "word":"nasata"},
+    "v_clue": {"def":"minerale dal colore sanguigno", "word":"ematite"}
+  },
+  {
+    "index": 27,
+    "h_clue": {"def":"in gergo: \"trovata\", \"scovata\"", "word":"nasata"},
+    "v_clue": {"def":"piccolo mammifero portatore di malattie", "word":"ratto"}
+  },
+  {
+    "index": 28,
+    "h_clue": {"def":"in gergo: \"trovata\", \"scovata\"", "word":"nasata"},
+    "v_clue": {"def":"condizione fisica che disidrata", "word":"diarrea"}
+  },
+  {
+    "index": 29,
+    "h_clue": {"def":"-", "word":"-"},
+    "v_clue": {"def":"-", "word":"-"}
+  },
+  {
+    "index": 30,
+    "h_clue": {"def":"la banca della Santa Sede", "word":"ior"},
+    "v_clue": {"def":"lo siamo \"Noi\"", "word":"italiani"}
+  },
+  {
+    "index": 31,
+    "h_clue": {"def":"la banca della Santa Sede", "word":"ior"},
+    "v_clue": {"def":"quando non si può avere, un bambino si...", "word":"adotta"}
+  },
+  {
+    "index": 32,
+    "h_clue": {"def":"la banca della Santa Sede", "word":"ior"},
+    "v_clue": {"def":"l'uomo bianco per cui Hitler simpatizzava", "word":"ariano"}
+  },
+  {
+    "index": 33,
+    "h_clue": {"def":"fu un corpo di polizia tedesca", "word":"ss"},
+    "v_clue": {"def":"uno che si distingue positivamente, si dice che __", "word":"spicca"}
+  },
+  {
+    "index": 34,
+    "h_clue": {"def":"fu un corpo di polizia tedesca", "word":"ss"},
+    "v_clue": {"def":"Christian, apprezzato doppiatore italiano", "word":"iansante"}
+  },
+  {
+    "index": 35,
+    "h_clue": {"def":"-", "word":"-"},
+    "v_clue": {"def":"-", "word":"-"}
+  },
+  {
+    "index": 36,
+    "h_clue": {"def":"lo sono due che...si piacciono", "word":"attratti"},
+    "v_clue": {"def":"vi fu eretta la prima sede della Apple Computer...in breve", "word":"pasa"}
+  },
+  {
+    "index": 37,
+    "h_clue": {"def":"lo sono due che...si piacciono", "word":"attratti"},
+    "v_clue": {"def":"minerale dal colore sanguigno", "word":"ematite"}
+  },
+  {
+    "index": 38,
+    "h_clue": {"def":"lo sono due che...si piacciono", "word":"attratti"},
+    "v_clue": {"def":"piccolo mammifero portatore di malattie", "word":"ratto"}
+  },
+  {
+    "index": 39,
+    "h_clue": {"def":"lo sono due che...si piacciono", "word":"attratti"},
+    "v_clue": {"def":"condizione fisica che disidrata", "word":"diarrea"}
+  },
+  {
+    "index": 40,
+    "h_clue": {"def":"lo sono due che...si piacciono", "word":"attratti"},
+    "v_clue": {"def":"Ancona", "word":"an"}
+  },
+  {
+    "index": 41,
+    "h_clue": {"def":"lo sono due che...si piacciono", "word":"attratti"},
+    "v_clue": {"def":"lo siamo \"Noi\"", "word":"italiani"}
+  },
+  {
+    "index": 42,
+    "h_clue": {"def":"lo sono due che...si piacciono", "word":"attratti"},
+    "v_clue": {"def":"quando non si può avere, un bambino si...", "word":"adotta"}
+  },
+  {
+    "index": 43,
+    "h_clue": {"def":"lo sono due che...si piacciono", "word":"attratti"},
+    "v_clue": {"def":"l'uomo bianco per cui Hitler simpatizzava", "word":"ariano"}
+  },
+  {
+    "index": 44,
+    "h_clue": {"def":"Pressione arteriosa diastolica", "word":"pad"},
+    "v_clue": {"def":"uno che si distingue positivamente, si dice che __", "word":"spicca"}
+  },
+  {
+    "index": 45,
+    "h_clue": {"def":"Pressione arteriosa diastolica", "word":"pad"},
+    "v_clue": {"def":"Christian, apprezzato doppiatore italiano", "word":"iansante"}
+  },
+  {
+    "index": 46,
+    "h_clue": {"def":"Pressione arteriosa diastolica", "word":"pad"},
+    "v_clue": {"def":"fu presidente degli USA, iniziali", "word":"dt"}
+  },
+  {
+    "index": 47,
+    "h_clue": {"def":"-", "word":"-"},
+    "v_clue": {"def":"-", "word":"-"}
+  },
+  {
+    "index": 48,
+    "h_clue": {"def":"una giornata in Campania", "word":"iornata"},
+    "v_clue": {"def":"minerale dal colore sanguigno", "word":"ematite"}
+  },
+  {
+    "index": 49,
+    "h_clue": {"def":"una giornata in Campania", "word":"iornata"},
+    "v_clue": {"def":"piccolo mammifero portatore di malattie", "word":"ratto"}
+  },
+  {
+    "index": 50,
+    "h_clue": {"def":"una giornata in Campania", "word":"iornata"},
+    "v_clue": {"def":"condizione fisica che disidrata", "word":"diarrea"}
+  },
+  {
+    "index": 51,
+    "h_clue": {"def":"una giornata in Campania", "word":"iornata"},
+    "v_clue": {"def":"Ancona", "word":"an"}
+  },
+  {
+    "index": 52,
+    "h_clue": {"def":"una giornata in Campania", "word":"iornata"},
+    "v_clue": {"def":"lo siamo \"Noi\"", "word":"italiani"}
+  },
+  {
+    "index": 53,
+    "h_clue": {"def":"una giornata in Campania", "word":"iornata"},
+    "v_clue": {"def":"quando non si può avere, un bambino si...", "word":"adotta"}
+  },
+  {
+    "index": 54,
+    "h_clue": {"def":"una giornata in Campania", "word":"iornata"},
+    "v_clue": {"def":"l'uomo bianco per cui Hitler simpatizzava", "word":"ariano"}
+  },
+  {
+    "index": 55,
+    "h_clue": {"def":"quasi intatto", "word":"intat"},
+    "v_clue": {"def":"uno che si distingue positivamente, si dice che __", "word":"spicca"}
+  },
+  {
+    "index": 56,
+    "h_clue": {"def":"quasi intatto", "word":"intat"},
+    "v_clue": {"def":"Christian, apprezzato doppiatore italiano", "word":"iansante"}
+  },
+  {
+    "index": 57,
+    "h_clue": {"def":"quasi intatto", "word":"intat"},
+    "v_clue": {"def":"fu presidente degli USA, iniziali", "word":"dt"}
+  },
+  {
+    "index": 58,
+    "h_clue": {"def":"quasi intatto", "word":"intat"},
+    "v_clue": {"def":"anello di filo e comune lombardo", "word":"asola"}
+  },
+  {
+    "index": 59,
+    "h_clue": {"def":"quasi intatto", "word":"intat"},
+    "v_clue": {"def":"minerale dal colore sanguigno", "word":"ematite"}
+  },
+  {
+    "index": 60,
+    "h_clue": {"def":"-", "word":"-"},
+    "v_clue": {"def":"-", "word":"-"}
+  },
+  {
+    "index": 61,
+    "h_clue": {"def":"-", "word":"-"},
+    "v_clue": {"def":"condizione fisica che disidrata", "word":"diarrea"}
+  },
+  {
+    "index": 62,
+    "h_clue": {"def":"-", "word":"-"},
+    "v_clue": {"def":"-", "word":"-"}
+  },
+  {
+    "index": 63,
+    "h_clue": {"def":"un tipo di rete", "word":"lan"},
+    "v_clue": {"def":"lo siamo \"Noi\"", "word":"italiani"}
+  },
+  {
+    "index": 64,
+    "h_clue": {"def":"un tipo di rete", "word":"lan"},
+    "v_clue": {"def":"quando non si può avere, un bambino si...", "word":"adotta"}
+  },
+  {
+    "index": 65,
+    "h_clue": {"def":"un tipo di rete", "word":"lan"},
+    "v_clue": {"def":"l'uomo bianco per cui Hitler simpatizzava", "word":"ariano"}
+  },
+  {
+    "index": 66,
+    "h_clue": {"def":"lo fu Marcello Lippi", "word":"ct"},
+    "v_clue": {"def":"uno che si distingue positivamente, si dice che __", "word":"spicca"}
+  },
+  {
+    "index": 67,
+    "h_clue": {"def":"lo fu Marcello Lippi", "word":"ct"},
+    "v_clue": {"def":"Christian, apprezzato doppiatore italiano", "word":"iansante"}
+  },
+  {
+    "index": 68,
+    "h_clue": {"def":"-", "word":"-"},
+    "v_clue": {"def":"-", "word":"-"}
+  },
+  {
+    "index": 69,
+    "h_clue": {"def":"si usano per insaporire il brodo", "word":"sedani"},
+    "v_clue": {"def":"anello di filo e comune lombardo", "word":"asola"}
+  },
+  {
+    "index": 70,
+    "h_clue": {"def":"si usano per insaporire il brodo", "word":"sedani"},
+    "v_clue": {"def":"minerale dal colore sanguigno", "word":"ematite"}
+  },
+  {
+    "index": 71,
+    "h_clue": {"def":"si usano per insaporire il brodo", "word":"sedani"},
+    "v_clue": {"def":"se non è \"presa\" è...", "word":"data"}
+  },
+  {
+    "index": 72,
+    "h_clue": {"def":"si usano per insaporire il brodo", "word":"sedani"},
+    "v_clue": {"def":"condizione fisica che disidrata", "word":"diarrea"}
+  },
+  {
+    "index": 73,
+    "h_clue": {"def":"si usano per insaporire il brodo", "word":"sedani"},
+    "v_clue": {"def":"anonimato che deriva dal Latino", "word":"nn"}
+  },
+  {
+    "index": 74,
+    "h_clue": {"def":"si usano per insaporire il brodo", "word":"sedani"},
+    "v_clue": {"def":"lo siamo \"Noi\"", "word":"italiani"}
+  },
+  {
+    "index": 75,
+    "h_clue": {"def":"-", "word":"-"},
+    "v_clue": {"def":"-", "word":"-"}
+  },
+  {
+    "index": 76,
+    "h_clue": {"def":"-", "word":"-"},
+    "v_clue": {"def":"l'uomo bianco per cui Hitler simpatizzava", "word":"ariano"}
+  },
+  {
+    "index": 77,
+    "h_clue": {"def":"lingua slava poco diffusa", "word":"ceco"},
+    "v_clue": {"def":"uno che si distingue positivamente, si dice che __", "word":"spicca"}
+  },
+  {
+    "index": 78,
+    "h_clue": {"def":"lingua slava poco diffusa", "word":"ceco"},
+    "v_clue": {"def":"Christian, apprezzato doppiatore italiano", "word":"iansante"}
+  },
+  {
+    "index": 79,
+    "h_clue": {"def":"lingua slava poco diffusa", "word":"ceco"},
+    "v_clue": {"def":"l'automobile che usava Wiston Churchill", "word":"car"}
+  },
+  {
+    "index": 80,
+    "h_clue": {"def":"lingua slava poco diffusa", "word":"ceco"},
+    "v_clue": {"def":"anello di filo e comune lombardo", "word":"asola"}
+  },
+  {
+    "index": 81,
+    "h_clue": {"def":"-", "word":"-"},
+    "v_clue": {"def":"-", "word":"-"}
+  },
+  {
+    "index": 82,
+    "h_clue": {"def":"-", "word":"-"},
+    "v_clue": {"def":"se non è \"presa\" è...", "word":"data"}
+  },
+  {
+    "index": 83,
+    "h_clue": {"def":"-", "word":"-"},
+    "v_clue": {"def":"-", "word":"-"}
+  },
+  {
+    "index": 84,
+    "h_clue": {"def":"\"no\" detto a Lisbona", "word":"nao"},
+    "v_clue": {"def":"anonimato che deriva dal Latino", "word":"nn"}
+  },
+  {
+    "index": 85,
+    "h_clue": {"def":"\"no\" detto a Lisbona", "word":"nao"},
+    "v_clue": {"def":"lo siamo \"Noi\"", "word":"italiani"}
+  },
+  {
+    "index": 86,
+    "h_clue": {"def":"\"no\" detto a Lisbona", "word":"nao"},
+    "v_clue": {"def":"\"Organizzazione dei Nazionalisti Ucraini\", anagramma", "word":"oun"}
+  },
+  {
+    "index": 87,
+    "h_clue": {"def":"-", "word":"-"},
+    "v_clue": {"def":"-", "word":"-"}
+  },
+  {
+    "index": 88,
+    "h_clue": {"def":"-", "word":"-"},
+    "v_clue": {"def":"uno che si distingue positivamente, si dice che __", "word":"spicca"}
+  },
+  {
+    "index": 89,
+    "h_clue": {"def":"-", "word":"-"},
+    "v_clue": {"def":"-", "word":"-"}
+  },
+  {
+    "index": 90,
+    "h_clue": {"def":"ad alcuni puzza, ad altri sa di fresco...", "word":"alito"},
+    "v_clue": {"def":"l'automobile che usava Wiston Churchill", "word":"car"}
+  },
+  {
+    "index": 91,
+    "h_clue": {"def":"ad alcuni puzza, ad altri sa di fresco...", "word":"alito"},
+    "v_clue": {"def":"anello di filo e comune lombardo", "word":"asola"}
+  },
+  {
+    "index": 92,
+    "h_clue": {"def":"ad alcuni puzza, ad altri sa di fresco...", "word":"alito"},
+    "v_clue": {"def":"\"Istituto Magistrale\"", "word":"im"}
+  },
+  {
+    "index": 93,
+    "h_clue": {"def":"ad alcuni puzza, ad altri sa di fresco...", "word":"alito"},
+    "v_clue": {"def":"se non è \"presa\" è...", "word":"data"}
+  },
+  {
+    "index": 94,
+    "h_clue": {"def":"ad alcuni puzza, ad altri sa di fresco...", "word":"alito"},
+    "v_clue": {"def":"\"altrimenti\" a Londra", "word":"or"}
+  },
+  {
+    "index": 95,
+    "h_clue": {"def":"-", "word":"-"},
+    "v_clue": {"def":"-", "word":"-"}
+  },
+  {
+    "index": 96,
+    "h_clue": {"def":"lo è \"42\", in breve", "word":"num"},
+    "v_clue": {"def":"lo siamo \"Noi\"", "word":"italiani"}
+  },
+  {
+    "index": 97,
+    "h_clue": {"def":"lo è \"42\", in breve", "word":"num"},
+    "v_clue": {"def":"\"Organizzazione dei Nazionalisti Ucraini\", anagramma", "word":"oun"}
+  },
+  {
+    "index": 98,
+    "h_clue": {"def":"lo è \"42\", in breve", "word":"num"},
+    "v_clue": {"def":"sinonimo gergale di \"adesso\"", "word":"mo"}
+  },
+  {
+    "index": 99,
+    "h_clue": {"def":"-", "word":"-"},
+    "v_clue": {"def":"-", "word":"-"}
+  },
+  {
+    "index": 100,
+    "h_clue": {"def":"è cantato come \"campanaro\"", "word":"framartino"},
+    "v_clue": {"def":"-", "word":"-"}
+  },
+  {
+    "index": 101,
+    "h_clue": {"def":"è cantato come \"campanaro\"", "word":"framartino"},
+    "v_clue": {"def":"l'automobile che usava Wiston Churchill", "word":"car"}
+  },
+  {
+    "index": 102,
+    "h_clue": {"def":"è cantato come \"campanaro\"", "word":"framartino"},
+    "v_clue": {"def":"anello di filo e comune lombardo", "word":"asola"}
+  },
+  {
+    "index": 103,
+    "h_clue": {"def":"è cantato come \"campanaro\"", "word":"framartino"},
+    "v_clue": {"def":"\"Istituto Magistrale\"", "word":"im"}
+  },
+  {
+    "index": 104,
+    "h_clue": {"def":"è cantato come \"campanaro\"", "word":"framartino"},
+    "v_clue": {"def":"se non è \"presa\" è...", "word":"data"}
+  },
+  {
+    "index": 105,
+    "h_clue": {"def":"è cantato come \"campanaro\"", "word":"framartino"},
+    "v_clue": {"def":"\"altrimenti\" a Londra", "word":"or"}
+  },
+  {
+    "index": 106,
+    "h_clue": {"def":"è cantato come \"campanaro\"", "word":"framartino"},
+    "v_clue": {"def":"-", "word":"-"}
+  },
+  {
+    "index": 107,
+    "h_clue": {"def":"è cantato come \"campanaro\"", "word":"framartino"},
+    "v_clue": {"def":"lo siamo \"Noi\"", "word":"italiani"}
+  },
+  {
+    "index": 108,
+    "h_clue": {"def":"è cantato come \"campanaro\"", "word":"framartino"},
+    "v_clue": {"def":"\"Organizzazione dei Nazionalisti Ucraini\", anagramma", "word":"oun"}
+  },
+  {
+    "index": 109,
+    "h_clue": {"def":"è cantato come \"campanaro\"", "word":"framartino"},
+    "v_clue": {"def":"sinonimo gergale di \"adesso\"", "word":"mo"}
+  }
+]

@@ -1,0 +1,16 @@
+[
+  {
+    "name": "The very first one...",
+    "language": "ITA",
+    "description": "This is the first crossword I created, approximately in 2017",
+    "rows": 10,
+    "cols": 11
+  },
+  {
+    "name": "A big cinema quiz",
+    "language": "ITA",
+    "description": "This one is about cinema, it's quite specific at times. It's meant to test your knowledge about cinema",
+    "rows": 15,
+    "cols": 15
+  }
+]
