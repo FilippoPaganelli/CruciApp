@@ -3,7 +3,7 @@
 # CruciApp
 
 
-## This is a Flutter project: a cross-platform app for solving crosswords.
+#### This is a Flutter project: a cross-platform app for solving crosswords.
 
 
 ## Home page:
