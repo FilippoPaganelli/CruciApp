@@ -172,14 +172,19 @@ class _CWPageState extends State<CWPage> {
                                             textDirection: TextDirection.ltr,
                                             textAlign: TextAlign.center,
                                             decoration: InputDecoration(
-                                                contentPadding:
-                                                    EdgeInsets.all(0),
+                                                focusedBorder:
+                                                    OutlineInputBorder(
+                                                        borderSide: BorderSide
+                                                            .none),
+                                                contentPadding: EdgeInsets
+                                                    .all(0),
                                                 enabledBorder:
                                                     OutlineInputBorder(
                                                         borderRadius:
-                                                            BorderRadius.all(
-                                                                Radius.circular(
-                                                                    0)),
+                                                            BorderRadius
+                                                                .all(Radius
+                                                                    .circular(
+                                                                        0)),
                                                         borderSide: BorderSide(
                                                             color: Colors
                                                                 .grey[600]))),
